@@ -1,18 +1,33 @@
-/*! UIkit 2.27.2 | http://www.getuikit.com | (c) 2014 YOOtheme | MIT License */
-/* ========================================================================
-   Component: Base
+/*
+ * Component:       Web page
+ * Description:     Defines styles for the Albert World Website.
  ========================================================================== */
-/*
- * 1. Normalize default `font-family` and set `font-size` to support `rem` units
- * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
- * 3. Style
- */
-/*
- * Removes default margin.
- */
+
+
+/* Fonts
+ ========================================================================== */
+
+body, h1, h2, h3, h4, h5, h6,
+.uk-navbar-nav > li > a { font-family: "Proxima Nova", "Helvetica Neue", Helvetica,"PingFang SC","Microsoft YaHei","微软雅黑", Arial, sans-serif; }
+
+
+/* Base
+ ========================================================================== */
+
+hawl {
+    overflow-y: scroll;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Removes default margin.
+ ========================================================================== */
 body {
   margin: 0;
 }
+
+/* Layout
+ ========================================================================== */
 
 .aw-footer {
   background-color:#000;
@@ -24,5 +39,155 @@ body {
 
 .aw-text-color {
   color:#444444;
+}
+
+.aw-background { background: #252525; }
+
+
+/*
+ * Blocks
+ */
+
+.aw-section { padding: 50px 0; }
+
+/* Tablet and bigger */
+@media (min-width: 768px) {
+
+    .aw-section { padding: 90px 0; }
+}
+
+/* Large screen and bigger */
+@media (min-width: 1220px) {
+
+    .aw-section { padding: 120px 0; }
+}
+
+/*
+ * Sections
+ */
+
+.aw-section .uk-heading-large { margin-bottom: 20px; }
+.aw-section .uk-text-large { margin-bottom: 60px; }
+
+.aw-section-color-1 { background: #2ba3d4 url("../images/bg_teaser.svg") 50% 50% no-repeat; }
+
+/* Desktop and bigger */
+@media (max-width: 959px) {
+
+    .aw-section-color-1 { background-image: none; }
+}
+
+.aw-section-color-2 { background: #3dc0f1; }
+
+.aw-section-colored,
+.aw-section-colored h1,
+.aw-section-colored h2,
+.aw-section-colored a:not([class]) { color: #fff !important; }
+
+.aw-section-color-2 a { text-decoration: underline; }
+
+.aw-section-color-white { background: #fff; }
+
+/* Tablet and bigger */
+@media (min-width: 768px) {
+    .aw-section-color-white .uk-grid-divider:not(:empty) > [class*='uk-width-medium-']:not(.uk-width-medium-1-1):nth-child(n+2) { border-left: 1px dashed #ddd; }
+    .aw-section-color-2 .uk-grid-divider:not(:empty) > [class*='uk-width-medium-']:not(.uk-width-medium-1-1):nth-child(n+2) { border-left: 1px dashed rgba(255,255,255,0.4); }
+
+}
+
+/*
+ * Navbar
+ */
+
+.aw-navbar {
+    padding: 15px 0;
+    border: none;
+    background: #000;
+}
+
+.aw-navbar .uk-navbar-content,
+.aw-navbar .uk-navbar-brand,
+.aw-navbar .uk-navbar-toggle {
+    height: 40px;
+    margin-top: 0;
+    text-shadow: none;
+}
+
+.aw-navbar .uk-navbar-nav > li > a {
+    height: 40px;
+    margin: 0;
+    border: none;
+    border-radius: 3px !important;
+    text-shadow: none;
+    font-size: 15px;
+}
+
+.aw-navbar .uk-navbar-nav > li { margin-left: 20px; }
+
+/* Hover */
+.aw-navbar .uk-navbar-nav > li:hover > a,
+.aw-navbar .uk-navbar-nav > li > a:focus,
+.aw-navbar .uk-navbar-nav > li.uk-open > a {
+    border: none;
+    color: #FFF;
+}
+
+/* Active */
+.aw-navbar .uk-navbar-nav > li.uk-active > a {
+    background-color: #2BA3D4;
+    color: #FFF;
+}
+
+/* OnClick */
+.aw-navbar .uk-navbar-nav > li > a:active { background-color: transparent; }
+
+/*
+ * Nav
+ */
+
+.aw-nav > li > a { color: #777; }
+
+/* Hover */
+.aw-nav > li > a:hover,
+.aw-nav > li > a:focus,
+.aw-nav > li.uk-active > a  {
+    background: #F5F5F5;
+    color: #444;
+}
+
+/* Sub-object: `nav-header` */
+.aw-nav .uk-nav-header {
+    color: #222;
+    font-weight: normal;
+}
+
+/*
+ * Nav
+ */
+
+.aw-subnav > li:nth-child(n+2) { margin-left: 20px; }
+
+/*
+ * Article
+ */
+
+.aw-article-subtitle {
+    padding-left: 6px;
+    border-left: 3px solid #1FA2D6;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+/*
+ * Showcase Overlay
+ */
+
+.aw-overlay-icon:empty:before {
+    content: "\f064";
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    font-size: 60px;
 }
 

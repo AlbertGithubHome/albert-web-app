@@ -1,0 +1,21 @@
+{% extends '__base__.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block beforehead %}
+
+<script>
+</script>
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="uk-width-medium aw-section aw-section-colored">
+    <h1>All users</h1>
+    {% for u in users %}
+    <p>{{ u.name }} / {{ u.email }}</p>
+    {% endfor %}
+    </div>
+
+{% endblock %}

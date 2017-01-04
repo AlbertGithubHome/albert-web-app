@@ -20,7 +20,7 @@
 <head>
     <meta charset="utf-8" />
     {% block meta %}<!-- block meta  -->{% endblock %}
-    <title>{% block title %} ? {% endblock %} - Albert Python Webapp</title>
+    <title>{% block title %} ? {% endblock %} - Albert Python</title>
     <link rel="stylesheet" href="/static/css/uikit.min.css">
     <link rel="stylesheet" href="/static/css/uikit.gradient.min.css">
     <link rel="stylesheet" href="/static/css/awesome.css" />
@@ -33,14 +33,15 @@
     <script src="/static/js/awesome.js"></script>
     {% block beforehead %}<!-- before head  -->{% endblock %}
 </head>
-<body>
-    <nav class="uk-navbar uk-navbar-attached uk-margin-bottom">
+<body class="aw-background">
+    <nav class="aw-navbar uk-navbar uk-navbar-attached">
         <div class="uk-container uk-container-center">
-            <a href="/" class="uk-navbar-brand">Albert</a>
-            <ul class="uk-navbar-nav">
-                <li data-url="blogs"><a href="/"><i class="uk-icon-home"></i> 日志</a></li>
-                <li><a target="_blank" href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000"><i class="uk-icon-book"></i> 教程</a></li>
-                <li><a target="_blank" href="https://github.com/michaelliao/awesome-python3-webapp"><i class="uk-icon-code"></i> 源码</a></li>
+             <a class="uk-navbar-brand uk-hidden-small" href="/"><img class="uk-margin uk-margin-remove" src="static/images/aw_icon.png" width="90" height="30" title="AlbertWorld" alt="AlbertWorld"></a>
+
+            <ul class="uk-navbar-nav uk-hidden-small">
+                <li data-url="blogs"><a href="/blog">技术日志</a></li>
+                <li><a target="_blank" href="/">网站教程</a></li>
+                <li><a target="_blank" href="/">程序源码</a></li>
             </ul>
             <div class="uk-navbar-flip">
                 <ul class="uk-navbar-nav">
@@ -94,7 +95,7 @@
                     <p>Made by <a href="http://www.yootheme.com" class="uk-link aw-text-color">Albert</a> with love and insistence. Copyright &copy; 2017.<br><a href="#" target="_blank">www.albert.com</a>. All rights reserved.</p>
                     <p>Licensed under <a href="https://github.com/AlbertGithubHome/albert-web-app/blob/master/LICENSE" class="aw-text-color">GPL license</a>.</p>
                     <!--<a target="_blank" href="#"><i class="uk-icon-android" style="font-size:64px; color: #444;"></i></a><br>-->
-                    <a href="index.html"><img src="static/images/aw_icon.png" width="90" height="30" title="AlbertWorld" alt="AlbertWorld"></a>
+                    <a href="/"><img src="static/images/aw_icon.png" width="90" height="30" title="AlbertWorld" alt="AlbertWorld"></a>
                 </div>
             </div>
         </div>

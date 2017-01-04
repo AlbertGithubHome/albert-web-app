@@ -1,6 +1,6 @@
 {% extends '__base__.html' %}
 
-{% block title %}日志{% endblock %}
+{% block title %}Blog{% endblock %}
 
 {% block beforehead %}
 
@@ -11,7 +11,7 @@
 
 {% block content %}
 
-    <div class="uk-width-medium-3-4">
+    <div class="uk-width-medium-3-4 aw-section aw-section-colored">
     {% for blog in blogs %}
         <article class="uk-article">
             <h2><a href="/blog/{{ blog.id }}">{{ blog.name }}</a></h2>
