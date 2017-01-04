@@ -1,0 +1,28 @@
+/*! UIkit 2.27.2 | http://www.getuikit.com | (c) 2014 YOOtheme | MIT License */
+/* ========================================================================
+   Component: Base
+ ========================================================================== */
+/*
+ * 1. Normalize default `font-family` and set `font-size` to support `rem` units
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ * 3. Style
+ */
+/*
+ * Removes default margin.
+ */
+body {
+  margin: 0;
+}
+
+.aw-footer {
+  background-color:#000;
+  border-top:1px;
+  width:100%;
+  position:fixed;
+  bottom:0;
+}
+
+.aw-text-color {
+  color:#444444;
+}
+

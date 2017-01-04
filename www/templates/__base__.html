@@ -20,10 +20,11 @@
 <head>
     <meta charset="utf-8" />
     {% block meta %}<!-- block meta  -->{% endblock %}
-    <title>{% block title %} ? {% endblock %} - Awesome Python Webapp</title>
+    <title>{% block title %} ? {% endblock %} - Albert Python Webapp</title>
     <link rel="stylesheet" href="/static/css/uikit.min.css">
     <link rel="stylesheet" href="/static/css/uikit.gradient.min.css">
     <link rel="stylesheet" href="/static/css/awesome.css" />
+    <link rel="stylesheet" href="/static/css/albert.css" />
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/js/sha1.min.js"></script>
     <script src="/static/js/uikit.min.js"></script>
@@ -35,7 +36,7 @@
 <body>
     <nav class="uk-navbar uk-navbar-attached uk-margin-bottom">
         <div class="uk-container uk-container-center">
-            <a href="/" class="uk-navbar-brand">Awesome</a>
+            <a href="/" class="uk-navbar-brand">Albert</a>
             <ul class="uk-navbar-nav">
                 <li data-url="blogs"><a href="/"><i class="uk-icon-home"></i> 日志</a></li>
                 <li><a target="_blank" href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000"><i class="uk-icon-book"></i> 教程</a></li>
@@ -70,18 +71,31 @@
         </div>
     </div>
 
-    <div class="uk-margin-large-top" style="background-color:#eee; border-top:1px solid #ccc;">
+    <div class="uk-margin-large-top aw-footer">
         <div class="uk-container uk-container-center uk-text-center">
             <div class="uk-panel uk-margin-top uk-margin-bottom">
+                <br>
                 <p>
-                    <a target="_blank" href="#" class="uk-icon-button uk-icon-weibo"></a>
-                    <a target="_blank" href="https://github.com/AlbertGithubHome" class="uk-icon-button uk-icon-github"></a>
-                    <a target="_blank" href="#" class="uk-icon-button uk-icon-linkedin-square"></a>
-                    <a target="_blank" href="#" class="uk-icon-button uk-icon-twitter"></a>
+                    <a target="_blank" href="#"><i class="uk-icon-weibo uk-icon-medium aw-text-color"></i></a>
+                    <a target="_blank" href="https://github.com/AlbertGithubHome"><i class="uk-icon-github uk-icon-medium aw-text-color"></i></a>
+                    <a target="_blank" href="#"><i class="uk-icon-linkedin-square uk-icon-medium aw-text-color"></i></a>
+                    <a target="_blank" href="#"><i class="uk-icon-twitter uk-icon-medium aw-text-color" ></i></a>
+                    <a target="_blank" href="#"><i class="uk-icon-hover uk-icon-subway uk-icon-medium aw-text-color"></i></a>
                 </p>
-                <p>Powered by <a href="http://blog.csdn.net/albertsh/">Albert Python Webapp</a>. Copyright &copy; 2017. [<a href="/manage/" target="_blank">Manage</a>]</p>
-                <p><a href="#" target="_blank">www.albert.com</a>. All rights reserved.</p>
-                <a target="_blank" href="http://www.w3.org/TR/html5/"><i class="uk-icon-html5" style="font-size:64px; color: #444;"></i></a>
+
+                <ul class="uk-subnav uk-subnav-line uk-flex-center">
+                    <li><a href="http://github.com/uikit/uikit">GitHub</a></li>
+                    <li><a href="http://github.com/uikit/uikit/issues">Issues</a></li>
+                    <li><a href="http://github.com/uikit/uikit/blob/master/CHANGELOG.md">Changelog</a></li>
+                    <li><a href="https://twitter.com/getuikit">Twitter</a></li>
+                </ul>
+                
+                <div class="uk-panel">
+                    <p>Made by <a href="http://www.yootheme.com" class="uk-link aw-text-color">Albert</a> with love and caffeine. Copyright &copy; 2017.<br><a href="#" target="_blank">www.albert.com</a>. All rights reserved.</p>
+                    <p>Licensed under <a href="https://github.com/AlbertGithubHome/albert-web-app/blob/master/LICENSE" class="aw-text-color">GPL license</a>.</p>
+                    <!--<a target="_blank" href="#"><i class="uk-icon-android" style="font-size:64px; color: #444;"></i></a><br>-->
+                    <a href="index.html"><img src="static/images/aw_icon.png" width="90" height="30" title="AlbertWorld" alt="AlbertWorld"></a>
+                </div>
             </div>
 
         </div>
