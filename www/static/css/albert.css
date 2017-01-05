@@ -18,12 +18,17 @@ hawl {
     overflow-y: scroll;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 /* Removes default margin.
  ========================================================================== */
 body {
   margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 /* Layout
@@ -33,7 +38,7 @@ body {
   background-color:#000;
   border-top:1px;
   width:100%;
-  position:fixed;
+  position:relative;
   bottom:0;
 }
 
