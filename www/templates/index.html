@@ -11,29 +11,59 @@
 
 {% block content %}
 
+    <!--
     <div class="aw-section-colored aw-container-center">
     <h1>All users</h1>
     {% for u in users %}
     <p>{{ u.name }} / {{ u.email }}</p>
     {% endfor %}
-    {% for u in users %}
-    <p>{{ u.name }} / {{ u.email }}</p>
-    {% endfor %}
-    {% for u in users %}
-    <p>{{ u.name }} / {{ u.email }}</p>
-    {% endfor %}
-    {% for u in users %}
-    <p>{{ u.name }} / {{ u.email }}</p>
-    {% endfor %}
-    {% for u in users %}
-    <p>{{ u.name }} / {{ u.email }}</p>
-    {% endfor %}
-    {% for u in users %}
-    <p>{{ u.name }} / {{ u.email }}</p>
-    {% endfor %}
-    {% for u in users %}
-    <p>{{ u.name }} / {{ u.email }}</p>
-    {% endfor %}
+    </div>
+    -->
+    <div class="aw-section aw-section-color-1 aw-section-colored">
+        <div class="uk-container uk-container-center uk-text-center">
+            <h1>All users</h1>
+            {% for u in users %}
+            <p>{{ u.name }} / {{ u.email }}</p>
+            {% endfor %}
+            <p class="aw-jumbotronSay">
+            每个程序猿上辈子一定是一个强大的魔法师！<br>
+            Every programmer must be a powerful witzard in his last life!
+            </p>
+        </div>
+    </div>
+    <div class="aw-section aw-section-color-2 aw-section-colored">
+        <div class="uk-container uk-container-center uk-text-center">
+            <p class="aw-jumbotronSay">
+            不会弹吉他的程序猿不是一个优秀的电子工程师!<br>
+            A programmer who can't play the guitar well won't <br>
+            turn into an excellent electrical engineer!
+            </p>
+            <p class="aw-jumbotronSay">
+            人生苦短, 为何不用Python?<br>
+            Life is short, I use Python!
+            </p>
+            <p class="aw-jumbotronSay">
+            不独善其身, 何以兼济天下.<br>
+            Talk is cheap, work on the code!
+            </p>
+        </div>
+    </div>
+
+    <div class="aw-section aw-section-color-white">
+        <div class="uk-container uk-container-center uk-text-center">
+            <h1>All users</h1>
+            {% for u in users %}
+            <p>{{ u.name }} / {{ u.email }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="aw-section aw-section-color-2 aw-section-colored">
+        <div class="uk-container uk-container-center uk-text-center">
+            <h1>All users</h1>
+            {% for u in users %}
+            <p>{{ u.name }} / {{ u.email }}</p>
+            {% endfor %}
+        </div>
     </div>
 
 {% endblock %}
