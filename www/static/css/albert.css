@@ -18,9 +18,6 @@ html {
     overflow-y: scroll;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    margin: 0;
-    padding: 0;
-    height: 100%;
 }
 
 /* Removes default margin.
@@ -42,11 +39,22 @@ body {
   bottom:0;
 }
 
+.aw-container-center
+{
+  background: url("../images/zzpic204.jpg") no-repeat;
+  height:100%;
+  width:100%;
+  overflow: hidden;
+  background-size:cover;
+}
+
 .aw-text-color {
   color:#444444;
 }
 
-.aw-background { background: #252525; }
+.aw-background { 
+  background: #252525; 
+}
 
 
 /*

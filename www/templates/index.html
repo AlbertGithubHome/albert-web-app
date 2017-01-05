@@ -1,4 +1,4 @@
-{% extends '__base__.html' %}
+{% extends '__index__.html' %}
 
 {% block title %}Home{% endblock %}
 
@@ -11,8 +11,26 @@
 
 {% block content %}
 
-    <div class="uk-width-medium aw-section aw-section-colored">
+    <div class="aw-section-colored aw-container-center">
     <h1>All users</h1>
+    {% for u in users %}
+    <p>{{ u.name }} / {{ u.email }}</p>
+    {% endfor %}
+    {% for u in users %}
+    <p>{{ u.name }} / {{ u.email }}</p>
+    {% endfor %}
+    {% for u in users %}
+    <p>{{ u.name }} / {{ u.email }}</p>
+    {% endfor %}
+    {% for u in users %}
+    <p>{{ u.name }} / {{ u.email }}</p>
+    {% endfor %}
+    {% for u in users %}
+    <p>{{ u.name }} / {{ u.email }}</p>
+    {% endfor %}
+    {% for u in users %}
+    <p>{{ u.name }} / {{ u.email }}</p>
+    {% endfor %}
     {% for u in users %}
     <p>{{ u.name }} / {{ u.email }}</p>
     {% endfor %}
