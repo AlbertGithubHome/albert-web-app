@@ -1,0 +1,1 @@
+insert into users values ('2','guest@example.com','123456',1,'guest','',0);
