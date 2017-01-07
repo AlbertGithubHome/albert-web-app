@@ -27,7 +27,8 @@ async def blog(request):
     ]
     return {
         '__template__': 'blogs.html',
-        'blogs': blogs
+        'blogs': blogs,
+        '__flag__': 1
     }
 
 @get('/')
