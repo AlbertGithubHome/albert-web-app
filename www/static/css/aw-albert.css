@@ -82,7 +82,7 @@ body {
 .aw-section .uk-heading-large { margin-bottom: 20px; }
 .aw-section .uk-text-large { margin-bottom: 60px; }
 
-.aw-section-color-1 { background: #2ba3d4 url("../images/bg_teaser.svg") 50% 50% no-repeat; }
+.aw-section-color-1 { background: #2ba3d4 url("../images/bg_teaser.svg") 50% 50% no-repeat; }/*bg_teaser.svg*/
 
 /* Desktop and bigger */
 @media (max-width: 959px) {
@@ -210,17 +210,19 @@ body {
 }
 
 
+
+.aw-welcome {
+  font-size: 28px;
+  font-family: Georgia,'Times New Roman','Microsoft YaHei','STHeiti',SimHei;
+}
+
+.aw-proverb {
+  font-size: 18px;
+  font-family: Georgia,'Times New Roman','Microsoft YaHei','STHeiti',SimHei;
+  margin-top: 25px;
+}
 /* Jumbotron */
-.aw-jumbotron {
-  color:black;
-  text-rendering: optimizeLegibility;
-  padding-top: 70px;
-  padding-bottom: 20px;
-  margin: 0;
-  background: url("/static/photos/index_cover2.jpg") no-repeat;
-  background-position: center;
-  min-height: 1100px;
-}.aw-jumbotronName:hover{
+.aw-jumbotronName:hover{
   -ms-transform: scale(1.25, 1.25); /* IE 9 */
   -webkit-transform: scale(1.25, 1.25); /* Safari */
   transform: scale(1.25, 1.25);
@@ -273,4 +275,12 @@ body {
 
 .aw-logo:hover{
   color:#000000;
+}
+
+.aw-navbar-text{
+  color: #d3d3d3;
+}
+
+.aw-navbar-text:hover{
+  color: #FFFFFF;
 }
