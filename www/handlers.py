@@ -38,3 +38,12 @@ async def index(request):
         '__template__': 'index.html',
         'users': users
     }
+
+@get('/tutorial')
+async def tutorial(request):
+    users = await User.findAll()
+    return {
+        '__template__': 'tutorial.html',
+        'users': users,
+        '__flag__': 2
+    }
