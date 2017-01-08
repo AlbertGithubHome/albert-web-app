@@ -82,7 +82,7 @@ body {
 .aw-section .uk-heading-large { margin-bottom: 20px; }
 .aw-section .uk-text-large { margin-bottom: 60px; }
 
-.aw-section-color-1 { background: #2ba3d4 url("../images/bg_teaser.svg") 50% 50% no-repeat; }/*bg_teaser.svg*/
+.aw-section-color-1 { background: #2ba3d4 url("../images/bg_albertworld.svg") 50% 50% no-repeat; }/*bg_teaser.svg*/
 
 /* Desktop and bigger */
 @media (max-width: 959px) {
