@@ -47,3 +47,10 @@ async def tutorial(request):
         'users': users,
         '__flag__': 2
     }
+
+@get('/api/allusers')
+async def api_get_users(request):
+    users = await User.findAll(orderBy='created_at desc')
+    for u in users:
+        u.password = '******'
+    return dict(users=users)
