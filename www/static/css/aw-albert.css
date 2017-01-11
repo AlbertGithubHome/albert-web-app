@@ -18,6 +18,9 @@ html {
     overflow-y: scroll;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin:0;
+    padding:0;
+    height:100%;
 }
 
 /* Removes default margin.
@@ -30,13 +33,36 @@ body {
 
 /* Layout
  ========================================================================== */
+.aw-subbody{
+  min-height:100%;
+  position:relative;
+}
+
+.aw-header{
+
+}
+
+.aw-center{
+  padding-bottom:60px;/* Height of the footer */
+}
+
+.aw-footer-new {
+  background-color:#000;
+  border-top:1px;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:230px;/* Height of the footer */
+
+}
 
 .aw-footer {
   background-color:#000;
   border-top:1px;
-  width:100%;
   position:relative;
   bottom:0;
+  width:100%;
+
 }
 
 .aw-container-center
@@ -53,7 +79,7 @@ body {
 }
 
 .aw-background { 
-  background: #252525; 
+  /*background: #252525; */
 }
 
 
