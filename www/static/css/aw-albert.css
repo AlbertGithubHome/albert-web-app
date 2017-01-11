@@ -43,10 +43,10 @@ body {
 }
 
 .aw-center{
-  padding-bottom:60px;/* Height of the footer */
+  padding-bottom:230px;/* Height of the footer */
 }
 
-.aw-footer-new {
+.aw-footer-down{
   background-color:#000;
   border-top:1px;
   position:absolute;
@@ -79,7 +79,7 @@ body {
 }
 
 .aw-background { 
-  /*background: #252525; */
+  background: #252525;
 }
 
 
