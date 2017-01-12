@@ -1,46 +1,64 @@
-<!DOCTYPE html>
-<html class="uk-height-1-1">
-<head>
-    <meta charset="utf-8" />
-    <title>登录 - Awesome Python Webapp</title>
-    <link rel="stylesheet" href="/static/css/uikit.min.css">
-    <link rel="stylesheet" href="/static/css/uikit.gradient.min.css">
-    <script src="/static/js/jquery.min.js"></script>
-    <script src="/static/js/sha1.min.js"></script>
-    <script src="/static/js/uikit.min.js"></script>
-    <script src="/static/js/vue.min.js"></script>
-    <script src="/static/js/awesome.js"></script>
-    <script>
-$(function() {
-    var vmAuth = new Vue({
+{% extends '__base__.html' %}
+
+{% block title %}登录{% endblock %}
+
+{% block beforehead %}
+
+<script>
+function validateEmail(email) {
+    var re = /^[a-z0-9\.\-\_]+\@[a-z0-9\-\_]+(\.[a-z0-9\-\_]+){1,4}$/;
+    return re.test(email.toLowerCase());
+}
+$(function () {
+    var vm = new Vue({
         el: '#vm',
         data: {
+            name: '',
             email: '',
-            passwd: ''
+            password1: '',
+            password2: ''
         },
         methods: {
-            submit: function(event) {
+            submit: function (event) {
                 event.preventDefault();
-                var
-                    $form = $('#vm'),
-                    email = this.email.trim().toLowerCase(),
-                    data = {
-                        email: email,
-                        passwd: this.passwd==='' ? '' : CryptoJS.SHA1(email + ':' + this.passwd).toString()
-                    };
-                $form.postJSON('/api/authenticate', data, function(err, result) {
-                    if (! err) {
-                        location.assign('/');
+                var $form = $('#vm');
+                if (! this.name.trim()) {
+                    return $form.showFormError('请输入名字');
+                }
+                if (! validateEmail(this.email.trim().toLowerCase())) {
+                    return $form.showFormError('请输入正确的Email地址');
+                }
+                if (this.password1.length < 6) {
+                    return $form.showFormError('口令长度至少为6个字符');
+                }
+                if (this.password1 !== this.password2) {
+                    return $form.showFormError('两次输入的口令不一致');
+                }
+                var email = this.email.trim().toLowerCase();
+                $form.postJSON('/api/users', {
+                    name: this.name.trim(),
+                    email: email,
+                    passwd: CryptoJS.SHA1(email + ':' + this.password1).toString()
+                }, function (err, r) {
+                    if (err) {
+                        return $form.showFormError(err);
                     }
+                    return location.assign('/');
                 });
             }
         }
     });
+    $('#vm').show();
 });
-    </script>
-</head>
-<body class="uk-height-1-1">
-    <div class="uk-vertical-align uk-text-center uk-height-1-1">
+</script>
+
+{% endblock %}
+
+{% block content %}
+    <div class="uk-vertical-align uk-text-center uk-height-1-3">
+    </div>
+
+    <div class="uk-vertical-align uk-text-center uk-height-1-3">
         <div class="uk-vertical-align-middle" style="width: 320px">
             <p><a href="/" class="uk-icon-button"><i class="uk-icon-html5"></i></a> <a href="/">Awesome Python Webapp</a></p>
             <form id="vm" v-on="submit: submit" class="uk-panel uk-panel-box uk-form">
@@ -63,5 +81,4 @@ $(function() {
             </form>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}
